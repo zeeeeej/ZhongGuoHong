@@ -5,8 +5,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("maven-publish")
 }
-//group = "com.github.zeeeeej"
-//version = "1.0.5"
 
 android {
     namespace = "com.zeeeej.android"
@@ -29,7 +27,7 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_18
         targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
@@ -66,8 +64,8 @@ afterEvaluate {
         publications {
             create("maven_public", MavenPublication::class) {
                 groupId = "com.github.zeeeeej"
-                artifactId = "zhongguohong"
-                version = "1.0.5"
+                artifactId = "zeeeeej-zhongguohong"
+                version = "1.0.6"
                 //from(components.getByName("java"))
             }
         }
