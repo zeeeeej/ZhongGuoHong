@@ -5,8 +5,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("maven-publish")
 }
-group = "com.github.zeeeeej"
-version = "1.0.0"
+//group = "com.github.zeeeeej"
+//version = "1.0.5"
 
 android {
     namespace = "com.zeeeej.android"
@@ -67,7 +67,7 @@ afterEvaluate {
             create("maven_public", MavenPublication::class) {
                 groupId = "com.github.zeeeeej"
                 artifactId = "zhongguohong"
-                version = "1.0.0"
+                version = "1.0.5"
                 //from(components.getByName("java"))
             }
         }
