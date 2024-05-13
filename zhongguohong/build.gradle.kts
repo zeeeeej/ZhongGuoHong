@@ -27,7 +27,7 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_18
+        sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
@@ -65,7 +65,7 @@ afterEvaluate {
             create("maven_public", MavenPublication::class) {
                 groupId = "com.github.zeeeeej"
                 artifactId = "zeeeeej-zhongguohong"
-                version = "1.0.6"
+                version = "1.0.7"
                 //from(components.getByName("java"))
             }
         }
