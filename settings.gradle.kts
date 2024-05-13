@@ -1,5 +1,8 @@
 import java.net.URI
 
+include(":xlog")
+
+
 pluginManagement {
     repositories {
         google {

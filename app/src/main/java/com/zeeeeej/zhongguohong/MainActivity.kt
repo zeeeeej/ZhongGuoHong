@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.sp
 import com.zeeeeej.zhongguohong.color.ZhRed
 import com.zeeeeej.zhongguohong.color.ZhongGuoSe
 import com.zeeeeej.zhongguohong.ui.theme.ZhongGuoHongTheme
+import com.zeeeej.xlog.XLog
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +49,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             fontSize = 48.sp,
             //color = colorResource(id = R.color.zh_hong)
             color = ZhRed.toColor()
+        )
+
+        Text(
+            text = XLog.msg(),
+            modifier = modifier,
+            fontSize = 12.sp,
+            //color = colorResource(id = R.color.zh_hong)
+            color = Color.Black
         )
     }
 
