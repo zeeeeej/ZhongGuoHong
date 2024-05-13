@@ -62,12 +62,18 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            create("maven_public", MavenPublication::class) {
+//            create("release", MavenPublication::class) {
+            create<MavenPublication>("release") {
+                from(components["release"])
                 groupId = "com.github.zeeeeej"
-                artifactId = "zeeeeej-zhongguohong"
-                version = "1.0.7"
-                //from(components.getByName("java"))
+                artifactId = "zhongguohong"
+                version = "1.0.8"
+
             }
+
+
         }
     }
+
+
 }
