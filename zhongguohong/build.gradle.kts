@@ -47,23 +47,29 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-afterEvaluate{
+//afterEvaluate{
+//    publishing {
+//        publications {
+//            create<MavenPublication>("release") {
+//                from(components["release"])
+//                // 设置构件 ID、组 ID 和版本
+//                groupId = "com.github.zeeeeej"
+//                artifactId = "zhongguohong"
+//                version = "1.0.0"
+//            }
+//        }
+//    }
+//}
+
+afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                // 设置构件 ID、组 ID 和版本
+            create("maven_public", MavenPublication::class) {
                 groupId = "com.github.zeeeeej"
                 artifactId = "zhongguohong"
                 version = "1.0.0"
-            }
-        }
-        repositories {
-            maven {
-                // 配置 Maven 仓库 URL
-                url = uri("http://your-repository-url.com")
+                from(components.getByName("java"))
             }
         }
     }
-
 }
