@@ -1,4 +1,4 @@
-package com.zeeeej.zhongguohong.ui.theme
+package com.zeeeeej.zhongguohong.ui.theme
 
 import android.app.Activity
 import android.os.Build
